@@ -6,4 +6,14 @@ def find_length_of_values(data: dict) -> int:
     Returns:
         int: The sum of the length of all values in the dictionary.
     """
-    return 
+    count = 0
+    for i in data.keys():
+        count += len(data[i])
+    return count
+result = find_length_of_values({
+    1 : "Khiva", 
+    2 : "Namangan", 
+    3 : "Samarkand", 
+    4 : "Tashkent"
+  })
+print(result)

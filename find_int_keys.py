@@ -6,4 +6,15 @@ def find_int_keys(data: dict) -> list:
     Returns:
         list: A list of all keys in the dictionary that are integers.
     """
-    return 
+    res = []
+    for i in data.keys():
+        if type(i) == type(12):
+            res.append(i)
+    return res
+result = find_int_keys({
+    'a': 1, 
+    3 : 2, 
+    'c': 3,
+    10:'a'
+  })
+print(result)
